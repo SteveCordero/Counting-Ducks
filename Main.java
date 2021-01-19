@@ -21,6 +21,7 @@ public class Main
         }//end the block of what the button will do.
     });//end the ActionListener
     frame1.add(button1);
+    
 
     frame1.setVisible(true);
   }//end ain method
