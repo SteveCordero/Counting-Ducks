@@ -10,8 +10,9 @@ public class Main
     frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     //YOU MSUT HAVE THIS LINE
     frame1.setSize(500,500);
-    
-    //Panel to hold the buttons
+    frame1.setVisible(true);
+
+    //--------------Panel to hold the buttons------------------------
     JPanel panel1 = new JPanel(new GridLayout(2,2,20,20));
 
     //-------------------------Button 1------------------------
@@ -34,11 +35,15 @@ public class Main
         System.out.println("Thanks, pal!");
       }
     });
+    //----------------------Label 1--------------------
+    JLabel label1 = new JLabel("Count the ducks");
+
 
     panel1.add(button1);
     panel1.add(button2);
+    panel1.add(label1);
 
     frame1.getContentPane().add(panel1);
-    frame1.setVisible(true);
+    
   }//end ain method
 }//end class Main
