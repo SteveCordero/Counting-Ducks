@@ -10,6 +10,8 @@ public class Main
     //YOU MSUT HAVE THIS LINE
     frame1.setSize(500,500);
 
+  
+
     //-------------------------Button 1------------------------
     JButton button1 = new JButton("Click me!");
 
@@ -20,8 +22,20 @@ public class Main
           System.out.println("Yay! you clicked the button");
         }//end the block of what the button will do.
     });//end the ActionListener
-    frame1.add(button1);
+
+    //--------------------------Button 2------------------------
+    JButton button2 = new JButton("No,click me");
+    button2.addActionListener(new ActionListener()
+    {
+      public void actionPerformed(ActionEvent e)
+      {
+        System.out.println("Thanks, pal!");
+      }
+    });
+
     
+    frame1.add(button1);
+    frame1.add(button2);
 
     frame1.setVisible(true);
   }//end ain method
