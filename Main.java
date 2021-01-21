@@ -7,7 +7,7 @@ public class Main
 {
   public static void main (String args[])
   {
-      JFrame frame1 = new JFrame("This is a JFrame");
+      JFrame frame1 = new JFrame("Steve Count Ducks");
       frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       //YOU MUST HAVE THIS LINE
       frame1.setSize(500,500);
@@ -16,14 +16,20 @@ public class Main
       //----------Panel to hold the buttons--------
       JPanel panel1 = new JPanel(new GridLayout(2,2, 20,20));
 
+      //---------------Label 1--------------------
+      JLabel label1 = new JLabel("Count the ducks");
+      JTextField textfield1 = new JTextField(10);
+      
       //-----------------Button 1-------------------
-      JButton  button1 = new JButton("Click me!");
+      JButton  button1 = new JButton("Update Label");
 
       button1.addActionListener(new ActionListener()
       {
           public void actionPerformed (ActionEvent e)
           {
-              System.out.println("Yay! you clicked the button");
+            String[] phrases = {"Counting ducks", " You counted to", "Look at you count", "Nice one there", "Keep Going!"};
+            String newText = phrases[(int)(Math.random() * phrases.length)];
+            label1.setText(newText);
           }//end the block of what the button will do
       }); //end the ActionListener
 
@@ -36,11 +42,7 @@ public class Main
             System.out.println("Thanks, pal!");
         }
       });
-      //---------------Label 1--------------------
-      JLabel label1 = new JLabel("Count the ducks");
-      JTextField textfield1 = new JTextField(10);
-
-
+      
       panel1.add(button1);
       panel1.add(button2);
       panel1.add(label1);
